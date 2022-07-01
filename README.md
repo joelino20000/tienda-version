@@ -93,6 +93,8 @@ un objeto es un ente orientado a objetos que consta de un estado y de un comport
 
 8-Que es un metodo en javascript
 Un metodo es una función la cual es propiedad de un Objeto. Existen dos tipos de métodos: Métodos de Instancia los cuales son tareas integradas realizadas por la instacia de un objeto, y los Métodos Estáticos que son tareas que pueden ser llamadas directamente en el constructor de un objeto
+
+
 ![image](https://user-images.githubusercontent.com/101758506/176820898-7073c3b2-9c17-4c3a-8cbd-d0b92514f4de.png)
 
 
