@@ -1,3 +1,7 @@
+//carrito version 1
+//Joel Bautista 
+//17/05/2022
+//cba sena
 //se crea la clase compra tienda
 class CompraTienda {
     //propiedades :: Atributos

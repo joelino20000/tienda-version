@@ -15,7 +15,7 @@ do{
       }
   
       //se convierte la tabla a tipó numericp
-      tabla = Number(tabla);  
+      tablas = Number(tabla);  
   
       //si tabla ponen letras se pasa a este mensaje que le dira intentelo de nuevo
       if(Number.isNaN(tablas) === true){
@@ -32,7 +32,7 @@ do{
      //aca me va a reccorrer y si es mayor a uno y menor a diez me va a imprimir la tabla con un alert
     for (let i = 1; i < 11; i++) {
       
-      multiplicacionAlert=multiplicacionAlert+tablas + " * "+ i +" = " + tabla*i+'\n';
+      multiplicacionAlert=multiplicacionAlert+tablas + " * "+ i +" = " + tablas*i+'\n';
     }
     alert(multiplicacionAlert)
     // se le pregunta si quiere otra tabla de multiplicar

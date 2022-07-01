@@ -1,3 +1,7 @@
+//carrito version 2
+//Joel Bautista 
+//17/05/2022
+//cba sena
 //creamos la clase para la zona del cliente
 class Vendedor {
   //definimos los atributos
