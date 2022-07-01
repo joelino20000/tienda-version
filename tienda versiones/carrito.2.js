@@ -50,7 +50,7 @@ class Vendedor {
 
 }
 
-
+// se define la clase productosEnVenta la cual va a contener un array
 class productosEnVenta {
   //atributos
   #productos = [];
@@ -65,26 +65,7 @@ class productosEnVenta {
     return this.#productos
   }
 
-  //creamos un metodo para validar texto
- /*validacionNombre(texto) {
-
-  do {
-    let nombre = prompt(texto);
-
-    if (nombre !== "" && !(!/^[a-zA-Z ]*$/g.test(nombre)))
-      return nombre;
-  } while (true);
-};
-
-  //creamos un metodo para validar numeros
-  validacionNumero(texto) {
- 
-  do {
-    let nombre = prompt(texto);
-    
-    if (nombre !== "" && !(!/^[0-9]*$/g.test(nombre)))
-      return nombre;
-  } while (true);*/
+  
 
 
   //metodo para capturar recolectar los datos de los productos
@@ -104,7 +85,7 @@ class productosEnVenta {
   
 };
 //-------------Cliente---------------------  
-
+// se define la clase productosCliente la cual va a contener atributos y metodos getter y setter 
 class ProductosCliente {
 //Atributos 
 #nomClient;
@@ -154,7 +135,7 @@ set setPrecioProducClient(value){
 
 }
 
-
+// se define la clase ProductosEnMano la cual va a contener un array para el cliente 
 class ProductosEnMano{
 //atributos
 #manoCl = [];
@@ -243,29 +224,31 @@ do{
 
 //capturamos la cantidad de porductos que desea comprar el cliente y lo comparamos con la cantidad que se esta vendiendo
 function capturaCantClient(nombreProducto){
-do{
-  let cantiClient = validacionNumero("Digite la cantidad que desea comprar =>")
-  //parseInt sirve para convertir string a numero
   do{
-  let cantidad = parseInt(cantiClient);
-  for (let revisarProd of arreglo.getProductos){
-    
-    if( cantidad  <= revisarProd.getCantidadProducto && nombreProducto===revisarProd.getNombreProducto){
+    let cantiClient = validacionNumero("Digite la cantidad que desea comprar =>")
+    //parseInt sirve para convertir string a numero
+    do{
+    let cantidad = parseInt(cantiClient);
+    for (let revisarProd of arreglo.getProductos){
       
-      revisarProd.setCantidadProducto=revisarProd.getCantidadProducto-cantidad
+      if( cantidad  <= revisarProd.getCantidadProducto && nombreProducto===revisarProd.getNombreProducto){
+        
+        revisarProd.setCantidadProducto=revisarProd.getCantidadProducto-cantidad
 
-      //realizamos la multiplicacion entre la cantidad que desea comprar el cliente por el precio de venta
-      total= cantidad*revisarProd.getPrecioProducto
-      let array=[total,cantidad]
-      return array
-    }
-  }
+        //realizamos la multiplicacion entre la cantidad que desea comprar el cliente por el precio de venta
+        total= cantidad*revisarProd.getPrecioProducto
+        let array=[total,cantidad]
+        return array
+      }
+}
     console.log("No contamos con esta cantidad")  
     sw=false
   
   }while(false)    
 }while(true)
 }
+
+//se declara las variables para comenzar a capturar el nombre del vendedor
 let nombre="";
 nombre = capturaNombre("Nombre del vendedor"); 
 //funcion Para capturar el nombre del vendedor
@@ -273,17 +256,17 @@ nombre = capturaNombre("Nombre del vendedor");
 let sw = true;
 
 //capturamos el nombre del vendedor
- function capturaNombre(){
-    do{
-      console.log('------------- Vendedor -------------');
-      let nombre = prompt('Digite su nombre =>');
-    if (nombre !== "" && !(!/^[a-zA-Z ]*$/g.test(nombre)))
-      return nombre;
-    }while(sw)
- };
+function capturaNombre(){
+  do{
+    console.log('------------- Vendedor -------------');
+    let nombre = prompt('Digite su nombre =>');
+  if (nombre !== "" && !(!/^[a-zA-Z ]*$/g.test(nombre)))
+    return nombre;
+  }while(sw)
+};
 
 
-
+//Aca comienza el programa la cual va a pedir todos los datos del vendedor 
 
 let arreglo = new productosEnVenta;
 //mostramos la tabal de productos a la venta

@@ -10,7 +10,7 @@ do{
     
     
     //Aca se le va a pedir que digite el valor a comprar
-    produc=prompt("digite el producto a comprar sinedo c=camisa, p=pantalon m=medias")
+    produc=prompt("digite el producto a comprar sinedo c=camisa que vale =20000, p=pantalonque vale=50000, m=medias que vale= M: 5000")
     
     
     
@@ -52,7 +52,7 @@ do{
         //aca se va a pedir al usuario que digite la cantidad del prodcuto que va a comprar
         canti=prompt("Digite la cantidad del producto a comprar")
         
-        med=objetos.m*canti
+        med=objetos.M*canti
         
         alert("Su total a pagar es de " + med + " pesos" );
         break;

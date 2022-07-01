@@ -335,7 +335,7 @@ class CompraProductoTienda {
                     //
                     datosProductos.forEach((objeto, index) => {
                          //if compara los codigos digitados con los existentes
-                         if (objeto.getCodigoProducto === valor){
+                         if (objeto.getCodigoProducto === valor && objeto.getInventarioProducto > 0){
                               //
                               this.setCantidadCompra = objeto.getInventarioProducto;
                               //
@@ -355,7 +355,7 @@ class CompraProductoTienda {
                };
                //este if define que el sw es true nos muestra el mensaje  
                if (sw){
-                    console.log("Codigo no existe. ¡Verifique!");
+                    console.log("Codigo no existe y/o es mayor a las existencias en bodega. ¡Verifique!");
                }
           } while (sw);
 
@@ -379,8 +379,12 @@ class CompraProductoTienda {
                valor = Number(prompt("Digite Número de unidades ==>"));
                //si la cantidad digitada del cliente es menor o igual a la cantidad del vendedor siga recorriendo el if
                if (valor <= this.getCantidadCompra){
+                    
                     // valor se guarda en  setCantidadCompra
                     this.setCantidadCompra = valor;
+                    if(this.setCantidadCompra === 0){
+                         console.log("No a digitado nada")
+                    }
                     //try es un bloque de instrucciones a intentar 
                     try {
                          //cargaProductos.forEach recorre el arreglo
